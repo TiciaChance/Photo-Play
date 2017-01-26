@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13458AE66EE09F18D70EC299 /* Pods_Photo_Play.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7545E3A6B1F5E67297A4150 /* Pods_Photo_Play.framework */; };
+		864F39A71E39861700EAE5FF /* PhotoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864F39A61E39861700EAE5FF /* PhotoParser.swift */; };
 		86CD92C91E39034A00384A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CD92C81E39034A00384A3D /* AppDelegate.swift */; };
 		86CD92CB1E39034A00384A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CD92CA1E39034A00384A3D /* ViewController.swift */; };
 		86CD92CE1E39034A00384A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CD92CC1E39034A00384A3D /* Main.storyboard */; };
 		86CD92D01E39034A00384A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CD92CF1E39034A00384A3D /* Assets.xcassets */; };
 		86CD92D31E39034A00384A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86CD92D11E39034A00384A3D /* LaunchScreen.storyboard */; };
+		86CD92E11E39050600384A3D /* UnsplashRandomImgAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CD92E01E39050600384A3D /* UnsplashRandomImgAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DA94D1A34643643C3FBABD8 /* Pods-Photo Play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Play.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photo Play/Pods-Photo Play.release.xcconfig"; sourceTree = "<group>"; };
+		864F39A61E39861700EAE5FF /* PhotoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoParser.swift; sourceTree = "<group>"; };
 		86CD92C51E39034A00384A3D /* Photo Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CD92C81E39034A00384A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86CD92CA1E39034A00384A3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		86CD92CF1E39034A00384A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86CD92D21E39034A00384A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86CD92D41E39034A00384A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86CD92E01E39050600384A3D /* UnsplashRandomImgAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashRandomImgAPI.swift; sourceTree = "<group>"; };
+		A7545E3A6B1F5E67297A4150 /* Pods_Photo_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photo_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD7C4FD8D0988DD8CAD370E /* Pods-Photo Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Play.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photo Play/Pods-Photo Play.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13458AE66EE09F18D70EC299 /* Pods_Photo_Play.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A5405B10C5B38FFA934E743 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7545E3A6B1F5E67297A4150 /* Pods_Photo_Play.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86CD92BC1E39034900384A3D = {
 			isa = PBXGroup;
 			children = (
 				86CD92C71E39034A00384A3D /* Photo Play */,
 				86CD92C61E39034A00384A3D /* Products */,
+				BCFF4BBEBC0C6EB129B9CA5B /* Pods */,
+				1A5405B10C5B38FFA934E743 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,73 @@
 		86CD92C71E39034A00384A3D /* Photo Play */ = {
 			isa = PBXGroup;
 			children = (
-				86CD92C81E39034A00384A3D /* AppDelegate.swift */,
-				86CD92CA1E39034A00384A3D /* ViewController.swift */,
-				86CD92CC1E39034A00384A3D /* Main.storyboard */,
-				86CD92CF1E39034A00384A3D /* Assets.xcassets */,
-				86CD92D11E39034A00384A3D /* LaunchScreen.storyboard */,
-				86CD92D41E39034A00384A3D /* Info.plist */,
+				86CD92DA1E39047500384A3D /* App Delegation */,
+				86CD92DE1E3904C500384A3D /* View Controllers */,
+				86CD92DD1E3904B900384A3D /* Networking */,
+				86CD92DC1E3904A500384A3D /* Model */,
+				86CD92DB1E39048900384A3D /* Storyboards */,
+				86CD92DF1E3904E000384A3D /* Resources */,
 			);
 			path = "Photo Play";
+			sourceTree = "<group>";
+		};
+		86CD92DA1E39047500384A3D /* App Delegation */ = {
+			isa = PBXGroup;
+			children = (
+				86CD92C81E39034A00384A3D /* AppDelegate.swift */,
+			);
+			name = "App Delegation";
+			sourceTree = "<group>";
+		};
+		86CD92DB1E39048900384A3D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				86CD92D11E39034A00384A3D /* LaunchScreen.storyboard */,
+				86CD92CC1E39034A00384A3D /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		86CD92DC1E3904A500384A3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				864F39A61E39861700EAE5FF /* PhotoParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		86CD92DD1E3904B900384A3D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				86CD92E01E39050600384A3D /* UnsplashRandomImgAPI.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		86CD92DE1E3904C500384A3D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86CD92CA1E39034A00384A3D /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		86CD92DF1E3904E000384A3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86CD92CF1E39034A00384A3D /* Assets.xcassets */,
+				86CD92D41E39034A00384A3D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BCFF4BBEBC0C6EB129B9CA5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDD7C4FD8D0988DD8CAD370E /* Pods-Photo Play.debug.xcconfig */,
+				4DA94D1A34643643C3FBABD8 /* Pods-Photo Play.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CD92D71E39034A00384A3D /* Build configuration list for PBXNativeTarget "Photo Play" */;
 			buildPhases = (
+				663FE60CB7091101519934D9 /* [CP] Check Pods Manifest.lock */,
 				86CD92C11E39034900384A3D /* Sources */,
 				86CD92C21E39034900384A3D /* Frameworks */,
 				86CD92C31E39034900384A3D /* Resources */,
+				028E1D434F19EF142DD848C2 /* [CP] Embed Pods Frameworks */,
+				42EE8A49DF49D11CC57ED770 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +213,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		028E1D434F19EF142DD848C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photo Play/Pods-Photo Play-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42EE8A49DF49D11CC57ED770 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photo Play/Pods-Photo Play-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663FE60CB7091101519934D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86CD92C11E39034900384A3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CD92E11E39050600384A3D /* UnsplashRandomImgAPI.swift in Sources */,
 				86CD92CB1E39034A00384A3D /* ViewController.swift in Sources */,
 				86CD92C91E39034A00384A3D /* AppDelegate.swift in Sources */,
+				864F39A71E39861700EAE5FF /* PhotoParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +390,7 @@
 		};
 		86CD92D81E39034A00384A3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD7C4FD8D0988DD8CAD370E /* Pods-Photo Play.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAFW84825Y;
@@ -272,6 +404,7 @@
 		};
 		86CD92D91E39034A00384A3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA94D1A34643643C3FBABD8 /* Pods-Photo Play.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TAFW84825Y;
@@ -302,6 +435,7 @@
 				86CD92D91E39034A00384A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
