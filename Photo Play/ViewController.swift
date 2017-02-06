@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var test = UnsplashRandomImgAPI()
     var photos = [Photos]()
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       updateImageView()
+        updateImageView()
     }
     
     func updateImageView() {
@@ -33,20 +33,38 @@ class ViewController: UIViewController {
                 
                 DispatchQueue.main.async(execute: {
                     for photo in self.photos {
-                     self.photoImageView.image = photo.randomPhoto
+                        self.photoImageView.image = photo.randomPhoto
                         self.artistNameLabel.text = photo.artist
-
+                        
                     }
                 })
             }
         }
     }
 
+    
+ 
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        UIImageWriteToSavedPhotosAlbum(photoImageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your next hairstyle has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
